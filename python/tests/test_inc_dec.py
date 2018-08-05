@@ -1,5 +1,5 @@
 import unittest
-import inc_dec
+from app import inc_dec
 
 
 class Test_IncrementDecrement(unittest.TestCase):
