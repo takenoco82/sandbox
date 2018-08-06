@@ -1,5 +1,5 @@
 import unittest
-from app import IllegalArgmentError
+from app.IllegalArgmentError import IllegalArgmentError
 from app import fizzbuzz
 
 
