@@ -9,15 +9,15 @@ class TestFizzubzz(unittest.TestCase):
         self.assertEqual(actual, '1')
 
     def test_fizzbuzz_ok_fizz(self):
-        actual = fizzbuzz.fizzbuzz(1)
+        actual = fizzbuzz.fizzbuzz(3)
         self.assertEqual(actual, 'fizz')
 
     def test_fizzbuzz_ok_buzz(self):
-        actual = fizzbuzz.fizzbuzz(1)
+        actual = fizzbuzz.fizzbuzz(5)
         self.assertEqual(actual, 'buzz')
 
     def test_fizzbuzz_ok_fizzbuzz(self):
-        actual = fizzbuzz.fizzbuzz(1)
+        actual = fizzbuzz.fizzbuzz(15)
         self.assertEqual(actual, 'fizzbuzz')
 
     def test_fizzbuzz_error_none(self):
