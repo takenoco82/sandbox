@@ -1,2 +1,0 @@
-class IllegalArgmentError(Exception):
-    pass
