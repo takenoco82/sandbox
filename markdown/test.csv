@@ -1,0 +1,8 @@
+Key,Command
+Ctrl + B,Toggle bold
+Ctrl + I,Toggle italic
+Alt + S,Toggle strikethrough
+Ctrl + Shift + ],Toggle heading (uplevel)
+Ctrl + Shift + [,Toggle heading (downlevel)
+Ctrl + M,Toggle math environment
+Alt + C,Check/Uncheck task list item
