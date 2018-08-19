@@ -2,7 +2,7 @@
     <div>
         {{ msg }}
         <form>
-            <button>Add Task</button>
+            <button v-on:click="addTask()">Add Task</button>
             <button>Delete Finished Tasks</button>
             <p>input: <input type="text" v-model="newTask"></p>
             <p>task: {{ newTask }}</p>
@@ -29,6 +29,19 @@ export default {
       ],
       newTask: "test"
     };
+  },
+  methods: {
+    addTask: function(event) {
+      let text = this.newTask && this.newTask.trim();
+      if (!text) {
+        return;
+      }
+      this.tasks.push({
+        id: this.tasks.length + 1,
+        text: text,
+        done: false
+      });
+    }
   }
 };
 </script>
