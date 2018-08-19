@@ -3,13 +3,13 @@
         {{ msg }}
         <form>
             <button v-on:click="addTask()">Add Task</button>
-            <button>Delete Finished Tasks</button>
+            <button v-on:click="deleteTasks()">Delete Finished Tasks</button>
             <p>input: <input type="text" v-model="newTask"></p>
             <p>task: {{ newTask }}</p>
         </form>
         <div class="task-list">
             <ul>
-                <li v-for="task in tasks" v-bind:key="task.id"><label class="task-list__item"><input type="checkbox"><button>Edit</button>{{ task.text }}</label></li>
+                <li v-for="task in tasks" v-bind:key="task.id"><label class="task-list__item"><input type="checkbox" v-model="task.done"><button>Edit</button>{{ task.text }}</label></li>
             </ul>
         </div>
     </div>
@@ -41,6 +41,15 @@ export default {
         text: text,
         done: false
       });
+    },
+    deleteTasks: function(event) {
+      for (let i = this.tasks.length - 1; i >= 0; i--) {
+        const task = this.tasks[i];
+        if (task.done) {
+          console.log(task.text);
+          this.tasks.splice(i, 1);
+        }
+      }
     }
   }
 };
