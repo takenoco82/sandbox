@@ -9,7 +9,7 @@
         </form>
         <div class="task-list">
             <ul>
-                <li v-for="todo in todos" v-bind:key="todo.id"><label class="task-list__item"><input type="checkbox"><button>Edit</button>{{ todo.text }}</label></li>
+                <li v-for="task in tasks" v-bind:key="task.id"><label class="task-list__item"><input type="checkbox"><button>Edit</button>{{ task.text }}</label></li>
             </ul>
         </div>
     </div>
@@ -21,7 +21,7 @@ export default {
   data() {
     return {
       msg: "Welcome to Your Vue.js App",
-      todos: [
+      tasks: [
         { id: 1, text: "vue-router", done: false },
         { id: 2, text: "vuex", done: false },
         { id: 3, text: "vue-loader", done: false },
