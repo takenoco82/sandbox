@@ -31,13 +31,19 @@ export default {
     };
   },
   methods: {
+    maxTaskId: function() {
+      let result = this.tasks.reduce(function(max, x) {
+        return x.id > max.id ? x : max;
+      });
+      return result.id;
+    },
     addTask: function(event) {
       let text = this.newTask && this.newTask.trim();
       if (!text) {
         return;
       }
       this.tasks.push({
-        id: this.tasks.length + 1,
+        id: this.maxTaskId() + 1,
         text: text,
         done: false
       });
